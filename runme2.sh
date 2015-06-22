@@ -4,9 +4,10 @@ set -x
 set -e
 
 SYSTEMD_REPOSITORY=https://github.com/gmacario/systemd.git
-SYSTEMD_BRANCH=bootchart-hackme
+#SYSTEMD_BRANCH=bootchart-hackme
+SYSTEMD_BRANCH=fix-issue139
 
-dnf update
+dnf upgrade -y
 
 # Prereq for getting systemd sources
 dnf install -y git
@@ -35,5 +36,6 @@ make
 # Test
 mkdir -p /run/log
 ./systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --cmdline --per-cpu
+cp /run/log/*.svg /shared/
 
 # EOF
