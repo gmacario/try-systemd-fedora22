@@ -5,7 +5,9 @@ set -e
 
 SYSTEMD_REPOSITORY=https://github.com/gmacario/systemd.git
 #SYSTEMD_BRANCH=bootchart-hackme
-SYSTEMD_BRANCH=fix-issue139
+#SYSTEMD_BRANCH=fix-issue139
+#SYSTEMD_BRANCH=fix-issue139-v2
+#SYSTEMD_BRANCH=v210
 #SYSTEMD_BRANCH=v220
 
 dnf upgrade -y
@@ -38,7 +40,7 @@ make build-native
 cd /shared
 [ ! -e systemd ] && git clone ${SYSTEMD_REPOSITORY}
 cd /shared/systemd
-git checkout ${SYSTEMD_BRANCH}
+[ "${SYSTEMD_BRANCH}" != "" ] && git checkout ${SYSTEMD_BRANCH}
 
 ./autogen.sh
 
