@@ -63,7 +63,8 @@ ps ax -L
 
 mkdir -p /run/log
 #./systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --cmdline --per-cpu
-/shared/systemd/systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --cmdline
+#/shared/systemd/systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --cmdline
+/shared/systemd/systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --no-filter --cmdline
 
 ps ax -L
 killall hello-thread
