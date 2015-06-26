@@ -109,8 +109,8 @@ mkdir -p /run/log
 #/shared/systemd/systemd-bootchart --rel --freq=50 --samples=1000 --scale-x=100 --scale-y=20 --no-filter --cmdline
 #/shared/systemd/systemd-bootchart --rel --freq=50 --samples=5000 --scale-x=5 --scale-y=20 --no-filter --cmdline --per-cpu
 #/shared/systemd/systemd-bootchart --rel --freq=50 --samples=500 --scale-x=100 --scale-y=20 --no-filter --cmdline --per-cpu
-#/shared/systemd/systemd-bootchart --rel --freq=50 --samples=500 --scale-x=100 --scale-y=20 --no-filter --cmdline
-/shared/systemd/systemd-bootchart --rel --freq=50 --samples=10 --scale-x=100 --scale-y=20 --no-filter --cmdline
+/shared/systemd/systemd-bootchart --rel --freq=50 --samples=500 --scale-x=100 --scale-y=20 --no-filter --cmdline
+#/shared/systemd/systemd-bootchart --rel --freq=50 --samples=10 --scale-x=100 --scale-y=20 --no-filter --cmdline
 
 ps ax -L
 killall hello-thread
